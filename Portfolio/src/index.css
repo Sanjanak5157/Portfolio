@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+@import 'remixicon/fonts/remixicon.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── scrollbar ── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 2px; }
+
+/* ── selection ── */
+::selection { background: #7c3aed; color: #fff; }
+
+/* ── smooth scroll ── */
+html { scroll-behavior: smooth; }
+
+/* ── noise overlay (used in App) ── */
+.noise-overlay {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 0; opacity: 0.03;
+}
+
+/* ── typing cursor blink ── */
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.blink { animation: blink 1s infinite; }
+
+/* ── slide-in animations (triggered via JS class toggle) ── */
+.fade-up   { opacity:0; transform:translateY(32px);  transition: opacity .5s ease, transform .5s ease; }
+.fade-left { opacity:0; transform:translateX(-32px); transition: opacity .5s ease, transform .5s ease; }
+.in-view   { opacity:1; transform:none; }
+
+/* ── nav link hover ── */
+.nav-link:hover { color: #fff !important; }
+
+/* ── card hover lift ── */
+.card-hover { transition: transform .2s, box-shadow .2s; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(124,58,237,.18); }
+
+/* ── tag pill ── */
+.tag {
+  @apply px-2 py-0.5 rounded text-[11px] font-mono border;
+  background: rgba(255,255,255,0.04);
+  color: #6b6b80;
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* ── section heading accent line ── */
+.section-accent-line {
+  display: inline-block;
+  width: 40px; height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  vertical-align: middle;
+  margin-right: 10px;
+}

@@ -1,0 +1,2 @@
+Replace profile.jpg in this folder with your own photo.
+Recommended: square image, at least 500x500px, JPG or PNG.
