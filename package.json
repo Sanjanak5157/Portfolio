@@ -1,5 +1,20 @@
 {
+  "name": "portfolio",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "...",
+    "react-dom": "..."
+  },
   "devDependencies": {
+    "vite": "...",
+    "@vitejs/plugin-react": "...",
     "gh-pages": "^6.3.0"
   }
 }
